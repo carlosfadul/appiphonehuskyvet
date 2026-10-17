@@ -7,7 +7,7 @@ for name in BUILD_NUMBER APPLE_TEAM_ID APPLE_CERTIFICATE_BASE64 APPLE_CERTIFICAT
 done
 [[ "$BUILD_NUMBER" =~ ^[1-9][0-9]{0,8}$ ]] || { echo 'Invalid build number'; exit 1; }
 [[ "$APPLE_TEAM_ID" =~ ^[A-Z0-9]{10}$ ]] || { echo 'Invalid Team ID'; exit 1; }
-major=$(xcodebuild -version | head -1 | awk '{print $2}' | cut -d. -f1)
+major=$(xcodebuild -version | sed -n '1p' | awk '{print $2}' | cut -d. -f1)
 test "$major" -ge 26
 umask 077
 private_dir=$(mktemp -d "${RUNNER_TEMP:?}/huskyvet-signing.XXXXXX")

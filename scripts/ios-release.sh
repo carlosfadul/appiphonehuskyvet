@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 test "$(uname -s)" = Darwin
-major=$(xcodebuild -version | head -1 | awk '{print $2}' | cut -d. -f1)
+major=$(xcodebuild -version | sed -n '1p' | awk '{print $2}' | cut -d. -f1)
 test "$major" -ge 26
 mkdir -p ios/App/output
 xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Release \

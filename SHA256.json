@@ -194,8 +194,8 @@
   "ios/App/Podfile": "e85f955e5af726edcc3be50f636a51173ecbe5929696b8ba2778b437d5c10313",
   "package-lock.json": "74d723dc8ef8be82f98f49873ed1a14fa48eef8d52ccb020d6b61fe0685679f2",
   "package.json": "9e1d99437e6fae105c033780d626adcc2fbc639aebe828238887754bbe0ea563",
-  "scripts/ios-release.sh": "08089a0d08b2a7133defe33ec4a397698f6dbc2edce4f14ba0a4d61b8e0003b2",
+  "scripts/ios-release.sh": "baca8a1e2a7c0ab2ea1a94d942edbad32a7906fdb7f26f3a4d02750dcb8aec78",
   "scripts/ios-simulator.sh": "30f9ae883c66e89c23e140b18c153484854b52653237cdab14928f1903ee65a8",
-  "scripts/ios-testflight.sh": "40ca23d3c050d1393282c981515b85451ad09581ecbf1453ee50209c229d589e",
+  "scripts/ios-testflight.sh": "862e401bc63bcea798dd1d1aa5255df6e626125a0a367edf16fc2967fe7f942b",
   "TESTFLIGHT.md": "e6217634365c94faf8ed0a304952270f00195f12aa44333099cd53297149ba9a"
 }
