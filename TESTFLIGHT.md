@@ -10,6 +10,10 @@ Identificador existente: `co.huskysoft.mascotas`. Nombre: Huskyvet. Idioma princ
 - Flujo manual `Huskyvet TestFlight`, solo para main; no se ejecuta al hacer push.
 - Credenciales exigidas al inicio, perfil validado contra el equipo y la aplicación, llavero temporal y limpieza al finalizar.
 
+## Verificación realizada
+
+El 17 de octubre de 2026 se aprobaron el archivo Release sin firma y la instalación y apertura en simulador iPhone 17 Pro con iOS 26, usando Xcode 26.3 y SDK 26.2. Se revisó la captura de bienvenida. Evidencia: https://github.com/carlosfadul/appiphonehuskyvet/actions/runs/39057101996 . Esto no acredita todavía la firma ni la subida.
+
 ## Pendiente cuando Apple active la membresía
 
 1. Confirmar acceso a Certificates, Identifiers & Profiles y App Store Connect.

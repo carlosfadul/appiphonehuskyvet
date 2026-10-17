@@ -15,3 +15,5 @@ No ejecutes ios:prepare desde este paquete reducido: el repositorio de desarroll
 Para iPhone físico/TestFlight se necesita configurar la cuenta y el equipo Apple, certificado y perfil de distribución. Usa co.huskysoft.mascotas como identificador salvo que Apple indique que no está disponible. No se incluyen credenciales, datos de clientes ni certificados.
 
 API: https://huskyvet.huskysoft.com.co/api/duenos. El backend debe admitir Origin capacitor://localhost. Usa cuentas de prueba para los ensayos. Los enlaces universales necesitan el Team ID y publicar la asociación del dominio; pegar el enlace de clínica ya está disponible.
+
+Compilación verificada con Xcode 26.3 y SDK 26.2: Release sin firma y arranque en iPhone 17 Pro simulado. Consulta TESTFLIGHT.md para la evidencia y la preparación de la subida manual.

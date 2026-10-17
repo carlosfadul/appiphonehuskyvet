@@ -3,7 +3,7 @@
   ".github/workflows/ios.yml": "25851c4c2c4ade667c94674d1dd86ac6df8aabd345044e603ffbf664b1bad47a",
   ".github/workflows/testflight.yml": "885955c9e4775c71d5d33e7787caa3145c2187e5dfc63859297b4ec5393fb49f",
   ".gitignore": "8d2290bfae56febe372f9c562d8c671c1f060b6e7597755b0ca8891ce3f07363",
-  "README.md": "6ac13e9839511047e6bf6f70910548c9d54db48148fdede2f6c958104849cf2a",
+  "README.md": "0bcaea13befa10323e281a4e42acb7ddb118e10ea3a41cb5075a821eef7c8d38",
   "capacitor.config.ts": "c598407f9d3982ce71044fc61df6435b2e21e0a86eac00fa4bdd5adf81eb2a43",
   "dist/assets/fondos/fondo-huskyvet.png": "1a0deae3a907ab875c93cd3bb8cef85b99b9503a71a4936e285f950b662e38d7",
   "dist/assets/img/Logo Huskyvet.jpg": "30cc7aacec1d32a75ab5020b1cf0f023dd5162782cc4e6959b8b14b721c2bb35",
@@ -197,5 +197,5 @@
   "scripts/ios-release.sh": "baca8a1e2a7c0ab2ea1a94d942edbad32a7906fdb7f26f3a4d02750dcb8aec78",
   "scripts/ios-simulator.sh": "30f9ae883c66e89c23e140b18c153484854b52653237cdab14928f1903ee65a8",
   "scripts/ios-testflight.sh": "862e401bc63bcea798dd1d1aa5255df6e626125a0a367edf16fc2967fe7f942b",
-  "TESTFLIGHT.md": "e6217634365c94faf8ed0a304952270f00195f12aa44333099cd53297149ba9a"
+  "TESTFLIGHT.md": "8c647dd3706b2d08f5598ee317274b5d16292291a1ce8e78ae3a61e270a581ca"
 }
