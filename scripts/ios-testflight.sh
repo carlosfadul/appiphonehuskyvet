@@ -45,10 +45,25 @@ security unlock-keychain -p "$keychain_password" "$keychain"
 security import "$private_dir/certificate.p12" -P "$APPLE_CERTIFICATE_PASSWORD" -k "$keychain" -T /usr/bin/codesign -T /usr/bin/security >/dev/null
 security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$keychain_password" "$keychain" >/dev/null
 security list-keychains -d user -s "$keychain" "$HOME/Library/Keychains/login.keychain-db"
+export PROFILE_UUID="$uuid"
+# Apply the distribution profile only to the app, never to CocoaPods frameworks.
+ruby - <<'RUBY'
+require 'xcodeproj'
+project = Xcodeproj::Project.open('ios/App/App.xcodeproj')
+target = project.targets.find { |t| t.name == 'App' }
+abort 'App target missing' unless target
+target.build_configurations.each do |config|
+  config.build_settings['DEVELOPMENT_TEAM'] = ENV.fetch('APPLE_TEAM_ID')
+  config.build_settings['CODE_SIGN_STYLE'] = 'Manual'
+  config.build_settings['CODE_SIGN_IDENTITY'] = 'Apple Distribution'
+  config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ENV.fetch('PROFILE_UUID')
+  config.build_settings['CURRENT_PROJECT_VERSION'] = ENV.fetch('BUILD_NUMBER')
+end
+project.save
+RUBY
 xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Release \
   -destination 'generic/platform=iOS' -archivePath ios/Release/Huskyvet.xcarchive \
-  DEVELOPMENT_TEAM="$APPLE_TEAM_ID" CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY='Apple Distribution' \
-  PROVISIONING_PROFILE_SPECIFIER="$uuid" CURRENT_PROJECT_VERSION="$BUILD_NUMBER" archive
+  archive
 export EXPORT_OPTIONS_PATH="$private_dir/ExportOptions.plist" PROFILE_UUID="$uuid"
 python3 - <<'PY'
 import os,plistlib
