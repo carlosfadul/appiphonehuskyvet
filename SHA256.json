@@ -1,7 +1,8 @@
 {
   ".gitattributes": "75d6aa346eb9f2be32e41e027684fb68c38fbf0b031c9bf069d5cca429e8f018",
-  ".github/workflows/ios.yml": "f4727b9b3c1ec5b9eb4e4a0a580ad14b0c23b48288742922bacc205881982f7e",
-  ".gitignore": "cf192447ea0e3fb0dfb50835a9a8ba2d01d8731bebca957473fe12bdd19d73bc",
+  ".github/workflows/ios.yml": "df051981cf3e1ff94d982d457c909909106625d7f5686cede37d157c1ba441b9",
+  ".github/workflows/testflight.yml": "885955c9e4775c71d5d33e7787caa3145c2187e5dfc63859297b4ec5393fb49f",
+  ".gitignore": "8d2290bfae56febe372f9c562d8c671c1f060b6e7597755b0ca8891ce3f07363",
   "README.md": "6ac13e9839511047e6bf6f70910548c9d54db48148fdede2f6c958104849cf2a",
   "capacitor.config.ts": "c598407f9d3982ce71044fc61df6435b2e21e0a86eac00fa4bdd5adf81eb2a43",
   "dist/assets/fondos/fondo-huskyvet.png": "1a0deae3a907ab875c93cd3bb8cef85b99b9503a71a4936e285f950b662e38d7",
@@ -193,5 +194,7 @@
   "ios/App/Podfile": "e85f955e5af726edcc3be50f636a51173ecbe5929696b8ba2778b437d5c10313",
   "package-lock.json": "74d723dc8ef8be82f98f49873ed1a14fa48eef8d52ccb020d6b61fe0685679f2",
   "package.json": "9e1d99437e6fae105c033780d626adcc2fbc639aebe828238887754bbe0ea563",
-  "scripts/ios-simulator.sh": "71fd222e1f0e368818f87a513b869b14bc097467a5935577aeac8848df66e47d"
+  "scripts/ios-release.sh": "08089a0d08b2a7133defe33ec4a397698f6dbc2edce4f14ba0a4d61b8e0003b2",
+  "scripts/ios-simulator.sh": "f9207888b50448bff6aa45bdad2d665cb39007ac95faa92b232f3c540a29d782",
+  "scripts/ios-testflight.sh": "e0ee2561422e6692a61c30219cb2bcdbec4534a7eb9310ce95c51403ce5c71a5"
 }

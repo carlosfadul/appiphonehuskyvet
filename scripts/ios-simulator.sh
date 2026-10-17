@@ -17,7 +17,7 @@ xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Debug \
 app="$PWD/ios/DerivedData/Build/Products/Debug-iphonesimulator/App.app"
 test -d "$app"
 # Pick an installed, available iPhone instead of assuming a model or runtime version.
-device="$(xcrun simctl list devices available --json | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>{const d=Object.values(JSON.parse(s).devices).flat().find(d=>d.isAvailable&&d.name.startsWith("iPhone"));if(!d)process.exit(1);process.stdout.write(d.udid)})')"
+device="$(xcrun simctl list devices available --json | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>{const d=Object.entries(JSON.parse(s).devices).filter(([r])=>/iOS-26-/.test(r)).flatMap(([,ds])=>ds).find(d=>d.isAvailable&&d.name.startsWith("iPhone"));if(!d)process.exit(1);process.stdout.write(d.udid)})')"
 state="$(xcrun simctl list devices --json | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(Object.values(JSON.parse(s).devices).flat().find(d=>d.udid===process.argv[1]).state))' "$device")"
 if [[ "$state" != Booted ]]; then xcrun simctl boot "$device"; fi
 xcrun simctl bootstatus "$device" -b

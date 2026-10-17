@@ -8,3 +8,6 @@ ios/App/output/
 *.mobileprovision
 *.pem
 *.key
+
+ios/Release/
+*.p8
