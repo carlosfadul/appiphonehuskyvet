@@ -2,7 +2,7 @@
   ".gitattributes": "75d6aa346eb9f2be32e41e027684fb68c38fbf0b031c9bf069d5cca429e8f018",
   ".github/workflows/ios.yml": "f4727b9b3c1ec5b9eb4e4a0a580ad14b0c23b48288742922bacc205881982f7e",
   ".gitignore": "cf192447ea0e3fb0dfb50835a9a8ba2d01d8731bebca957473fe12bdd19d73bc",
-  "README.md": "1ac3dd726b37178ad283595aba4218961c4c57fa35c4733ea87390725824e9cc",
+  "README.md": "6ac13e9839511047e6bf6f70910548c9d54db48148fdede2f6c958104849cf2a",
   "capacitor.config.ts": "c598407f9d3982ce71044fc61df6435b2e21e0a86eac00fa4bdd5adf81eb2a43",
   "dist/assets/fondos/fondo-huskyvet.png": "1a0deae3a907ab875c93cd3bb8cef85b99b9503a71a4936e285f950b662e38d7",
   "dist/assets/img/Logo Huskyvet.jpg": "30cc7aacec1d32a75ab5020b1cf0f023dd5162782cc4e6959b8b14b721c2bb35",

@@ -2,7 +2,7 @@
 
 Este paquete contiene el proyecto Xcode y el contenido ya compilado de familias y gestión. No es un instalador IPA.
 
-Este repositorio contiene Huskyvet, desarrollado por Huskysoft. El propietario autorizó alojarlo públicamente en carlosfadul/appiphonesimmexico; el nombre del repositorio no cambia la identidad de la aplicación.
+Este repositorio contiene Huskyvet, desarrollado por Huskysoft. El propietario autorizó alojarlo públicamente en carlosfadul/appiphonehuskyvet.
 
 La compilación se ejecuta al actualizar main. También puedes ejecutar Actions → Huskyvet iPhone prebuilt → Run workflow.
 
