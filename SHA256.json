@@ -1,6 +1,6 @@
 {
   ".gitattributes": "75d6aa346eb9f2be32e41e027684fb68c38fbf0b031c9bf069d5cca429e8f018",
-  ".github/workflows/ios.yml": "df051981cf3e1ff94d982d457c909909106625d7f5686cede37d157c1ba441b9",
+  ".github/workflows/ios.yml": "25851c4c2c4ade667c94674d1dd86ac6df8aabd345044e603ffbf664b1bad47a",
   ".github/workflows/testflight.yml": "885955c9e4775c71d5d33e7787caa3145c2187e5dfc63859297b4ec5393fb49f",
   ".gitignore": "8d2290bfae56febe372f9c562d8c671c1f060b6e7597755b0ca8891ce3f07363",
   "README.md": "6ac13e9839511047e6bf6f70910548c9d54db48148fdede2f6c958104849cf2a",
@@ -195,7 +195,7 @@
   "package-lock.json": "74d723dc8ef8be82f98f49873ed1a14fa48eef8d52ccb020d6b61fe0685679f2",
   "package.json": "9e1d99437e6fae105c033780d626adcc2fbc639aebe828238887754bbe0ea563",
   "scripts/ios-release.sh": "08089a0d08b2a7133defe33ec4a397698f6dbc2edce4f14ba0a4d61b8e0003b2",
-  "scripts/ios-simulator.sh": "f9207888b50448bff6aa45bdad2d665cb39007ac95faa92b232f3c540a29d782",
+  "scripts/ios-simulator.sh": "30f9ae883c66e89c23e140b18c153484854b52653237cdab14928f1903ee65a8",
   "scripts/ios-testflight.sh": "40ca23d3c050d1393282c981515b85451ad09581ecbf1453ee50209c229d589e",
   "TESTFLIGHT.md": "e6217634365c94faf8ed0a304952270f00195f12aa44333099cd53297149ba9a"
 }

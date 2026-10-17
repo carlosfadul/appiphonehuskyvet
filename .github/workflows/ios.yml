@@ -21,11 +21,13 @@ jobs:
         run: |
           xcodebuild -version
           xcrun --sdk iphoneos --show-sdk-version
-      - run: npm run ios:simulator
-        env:
-          HUSKYVET_USE_PREBUILT: '1'
+      - run: npx cap sync ios
       - name: Compile Release for physical iPhone without signing
         run: bash scripts/ios-release.sh
+      - run: npm run ios:simulator
+        timeout-minutes: 12
+        env:
+          HUSKYVET_USE_PREBUILT: '1'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
