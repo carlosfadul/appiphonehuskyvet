@@ -1,0 +1,30 @@
+{
+  "name": "huskysoft-mascotas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "sync": "npm run build && cap sync",
+    "android": "cap open android",
+    "ios": "cap open ios",
+    "ios:prepare": "node scripts/prepare-ios.cjs",
+    "ios:simulator": "bash scripts/ios-simulator.sh",
+    "test:ios-ui": "playwright test --config playwright.ios.config.ts"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.0.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.0"
+  }
+}

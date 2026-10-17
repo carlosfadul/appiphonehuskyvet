@@ -1,0 +1,1 @@
+import{O as r,X as o,f as n,fa as s}from"./chunk-PLKTGQJT.js";function x(t){t||(t=o(s));let i=new n(e=>{if(t.destroyed){e.next();return}return t.onDestroy(e.next.bind(e))});return e=>e.pipe(r(i))}export{x as a};

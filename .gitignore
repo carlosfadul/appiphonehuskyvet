@@ -1,0 +1,10 @@
+node_modules/
+ios/App/Pods/
+ios/DerivedData/
+ios/App/output/
+**/xcuserdata/
+.env*
+*.p12
+*.mobileprovision
+*.pem
+*.key

@@ -1,0 +1,26 @@
+name: Huskyvet iPhone prebuilt
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run ios:simulator
+        env:
+          HUSKYVET_USE_PREBUILT: '1'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Huskyvet-iPhone-simulator
+          path: ios/App/output/
+          retention-days: 14

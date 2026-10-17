@@ -1,0 +1,1 @@
+function n(){try{return sessionStorage.getItem("clinic-slug")}catch(t){return null}}function i(t){try{t?sessionStorage.setItem("clinic-slug",t):sessionStorage.removeItem("clinic-slug")}catch(e){}}export{n as a,i as b};
