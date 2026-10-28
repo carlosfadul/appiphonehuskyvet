@@ -1,13 +1,12 @@
 node_modules/
 ios/App/Pods/
 ios/DerivedData/
+ios/Release/
 ios/App/output/
 **/xcuserdata/
 .env*
 *.p12
+*.p8
 *.mobileprovision
 *.pem
 *.key
-
-ios/Release/
-*.p8
