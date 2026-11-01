@@ -11,7 +11,7 @@
   "dist/assets/img/Logo Huskyvet.jpg": "30cc7aacec1d32a75ab5020b1cf0f023dd5162782cc4e6959b8b14b721c2bb35",
   "dist/assets/img/Logo-Huskysoft-Fondo-Blanco.jpg": "418f51b3f6635e915f01c57da9c2d99db98f0a7e3a1f0032130ef8add7d98df2",
   "dist/assets/img/Logo-Huskysoft.png": "084d9f42e63abd9a758164a55f1aa6f9fbbb02dbefdb07f9c7004eea89a827df",
-  "dist/assets/index-76daJge_.js": "a352f3c1f8bdd946cc59d8cbe9886e24ff80ea44575c27c49ea3689917e97a57",
+  "dist/assets/index-76daJge_.js": "4fd647925e96b40fe1b38241e7b72d46f5b9af071679f568458115e71b3efe89",
   "dist/assets/index-BzxL4KHE.css": "e301c6498ec7f5b074560274506774ef9f145a91df6bd930b583d3713a18bfd4",
   "dist/assets/marketing/agenda-detalle.png": "3cdd59044d3b6b059af68b9905c00c5215c79403b1418da540580abb01708efe",
   "dist/assets/marketing/app-cuidados.png": "f3df575f87aa0050cceed3f29f4db6c7e301d9cf97810c8be2102d165c9dc008",
@@ -25,8 +25,8 @@
   "dist/assets/marketing/inventario.png": "ebb2b6d4a36f212a2e01a216d3e9f1de66c4474789203ccf866f8e261110ad98",
   "dist/assets/marketing/pagos-combinados.png": "ae9e96a7d40d8c72f105ce3fbd3829bcba00c6bde06f348e143cde203d90decf",
   "dist/assets/marketing/recepcion.png": "90429919b267a2c2e50fa97f7865354e1ec0e5f6b0a465e3f85117da2bfe400b",
-  "dist/assets/web-BWiS1jGV.js": "f5fd3cccf4854aed2e8a9c449dadb31ea1a7745ee40494279a2e3f509422e2a8",
-  "dist/assets/web-DNV4hK9d.js": "ef0d69da836ce7dfd16a0f1303b502c11c318a2e02822cb9677c894f582a1c5f",
+  "dist/assets/web-BWiS1jGV.js": "01b37f89c3e2a29994b6632e6b0e981dac112b04a2d8c8f01d350ba0582f3163",
+  "dist/assets/web-DNV4hK9d.js": "0df2741277ac4b7963a42c2fb863b48aa5736c46c62befb63c015a16c6e0312e",
   "dist/gestion/assets/fondos/fondo-huskyvet.png": "1a0deae3a907ab875c93cd3bb8cef85b99b9503a71a4936e285f950b662e38d7",
   "dist/gestion/assets/img/angular.svg": "6a0c7b244b58f01b1809789cec44e35523c283ce113445e4820a563d565e83ba",
   "dist/gestion/assets/img/huskysoft-favicon.png": "a99d02f9611d9e905689c211942076f273cc36d4489433752c06182c9c16d638",
@@ -173,7 +173,7 @@
   "dist/gestion/styles-WCMFE5SS.css": "10673a837a8cc6498b0aacdafb56229f930e9912aa8fa3d92f1bd28935e97d4b",
   "dist/gestion/tratamiento-datos.html": "efb1f7012dd1687d6c56e82d90215fc0fa8ca1285ce42c1903ab7eece98c7b86",
   "dist/huskyvet-logo.jpg": "30cc7aacec1d32a75ab5020b1cf0f023dd5162782cc4e6959b8b14b721c2bb35",
-  "dist/index.html": "9b0ee655dcb89750de2bf4801fbde49cb32c38b5a24a979fc2ecba15468b7fef",
+  "dist/index.html": "6f34df102e27a1f6011bdb39eb98e502e830ddfb19d143a4b95ea89c26706579",
   "ios/.gitignore": "2b7132a9943d2622e51e656897ca5162f56b121b40b423dedce1fbc699dba88a",
   "ios/App/App/AppDelegate.swift": "5963d47ceba89e0d5694376ebf0bca630284db3de794bdf8666ea3093fe38a2f",
   "ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png": "0294058e32ecea9a0e77425bd94103a2daabb3ee3313887fa44f72aee2b6cd09",
@@ -377,5 +377,8 @@
   "scripts/ios-release.sh": "baca8a1e2a7c0ab2ea1a94d942edbad32a7906fdb7f26f3a4d02750dcb8aec78",
   "scripts/ios-simulator.sh": "30f9ae883c66e89c23e140b18c153484854b52653237cdab14928f1903ee65a8",
   "scripts/ios-testflight.sh": "862e401bc63bcea798dd1d1aa5255df6e626125a0a367edf16fc2967fe7f942b",
-  "TESTFLIGHT.md": "92061459a34d3f85bd56e792324394d460265426fd71fdf8599d615b93fc55b0"
+  "TESTFLIGHT.md": "92061459a34d3f85bd56e792324394d460265426fd71fdf8599d615b93fc55b0",
+  "dist/assets/index-DpxcovyF.js": "72072ff0fc3ba864492a9d64e8d66595f8d084dbff2cd646dc59dac9637b1478",
+  "dist/assets/web-B524ace3.js": "3708859c8cb2f85f8ff4b2480dc498e80e8763682bc14e8321928de506cae3dc",
+  "dist/assets/web-B9lWvdPC.js": "c1850719dcd72b8e35fb31d3e1dd0a16e1e861fddb8a06fe0ae3b98265c03634"
 }
