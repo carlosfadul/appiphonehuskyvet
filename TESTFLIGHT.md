@@ -1,3 +1,9 @@
+## Publicación 1.20 — 27 de octubre de 2026
+
+Compilación 22 aceptada por Apple y habilitada en el grupo interno existente. Estado comprobado: VALID e IN_BETA_TESTING. Incluye las correcciones de sedes vacías, períodos independientes y tarifas. Ejecución: https://github.com/carlosfadul/appiphonehuskyvet/actions/runs/40614782682. Diez pruebas WebKit y recorrido móvil contra producción aprobados. No se afirma prueba en un iPhone físico.
+
+Los apartados anteriores conservados debajo son historial y no describen el estado actual.
+
 # Huskyvet: activación y TestFlight
 
 Identificador existente: `co.huskysoft.mascotas`. Nombre: Huskyvet. Idioma principal: español. SKU propuesto: `huskyvet-ios`. No cambiar el identificador entre el proyecto, el perfil y App Store Connect.
@@ -63,3 +69,4 @@ No guardar datos personales, claves, contraseñas ni cuentas de prueba en este r
 Usar cuentas y datos de prueba. Verificar acceso y salida de cada rol, aislamiento entre negocios, veterinaria y estética independientes, reservas de familia y confirmación del negocio, venta/recibo/AirPrint y cancelación de impresión, carga de archivos, permisos de notificación concedidos y rechazados, recordatorios, teclado y áreas seguras. Confirmar CORS para `capacitor://localhost` en el servidor.
 
 La compilación sin firma no valida certificados ni la aceptación de Apple. No hay todavía IPA firmado, carga a TestFlight ni pruebas completas por rol en un teléfono físico.
+

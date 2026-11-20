@@ -1,0 +1,26 @@
+[
+  {
+    "name": "manrope-latin-variable.woff2",
+    "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSg.woff2",
+    "bytes": 24532,
+    "sha256": "8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e"
+  },
+  {
+    "name": "roboto-latin-variable.woff2",
+    "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+    "bytes": 43136,
+    "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc"
+  },
+  {
+    "name": "Manrope-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt",
+    "bytes": 4387,
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+  },
+  {
+    "name": "Roboto-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/roboto/OFL.txt",
+    "bytes": 4394,
+    "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+  }
+]

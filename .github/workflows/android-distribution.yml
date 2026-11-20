@@ -1,0 +1,65 @@
+name: Huskyvet Android distribution
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    environment: testflight
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Check prepared sources and hosted Android SDK
+        run: |
+          test -f dist/index.html
+          test -f dist/gestion/index.html
+          test -f "$ANDROID_HOME/platforms/android-35/android.jar"
+          test -d "$ANDROID_HOME/licenses"
+          npm ci
+          npx cap sync android
+      - name: Build commercial and existing pilot channels
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_COMMERCIAL_KEYSTORE_BASE64 }}
+          ANDROID_PILOT_KEYSTORE_BASE64: ${{ secrets.ANDROID_PILOT_KEYSTORE_BASE64 }}
+          HUSKYVET_ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_COMMERCIAL_PASSWORD }}
+          HUSKYVET_ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_COMMERCIAL_PASSWORD }}
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_PILOT_KEYSTORE_BASE64"
+          test -n "$HUSKYVET_ANDROID_STORE_PASSWORD"
+          umask 077
+          export HUSKYVET_ANDROID_KEYSTORE="$RUNNER_TEMP/huskyvet-commercial.p12"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$HUSKYVET_ANDROID_KEYSTORE"
+          mkdir -p "$HOME/.android"
+          printf '%s' "$ANDROID_PILOT_KEYSTORE_BASE64" | base64 --decode > "$HOME/.android/debug.keystore"
+          chmod +x android/gradlew
+          cd android
+          ./gradlew assembleRelease bundleRelease assemblePilot --console=plain --no-daemon
+      - name: Verify and collect installers
+        run: |
+          mkdir -p android-distribution
+          cp android/app/build/outputs/apk/release/app-release.apk android-distribution/huskyvet-android.apk
+          cp android/app/build/outputs/bundle/release/app-release.aab android-distribution/huskyvet-android.aab
+          cp android/app/build/outputs/apk/pilot/app-pilot.apk android-distribution/huskyvet-android-pruebas.apk
+          node scripts/verify-android-artifacts.cjs android-distribution
+          cd android-distribution
+          sha256sum *.apk *.aab > SHA256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: huskyvet-android-distribution
+          path: android-distribution
+          retention-days: 14
+          if-no-files-found: error
+      - name: Remove signing files
+        if: always()
+        run: |
+          rm -f "$RUNNER_TEMP/huskyvet-commercial.p12" "$HOME/.android/debug.keystore"

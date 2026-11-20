@@ -1,0 +1,33 @@
+name: Huskyvet availability
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+permissions:
+  contents: read
+jobs:
+  public-availability:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify web and database readiness
+        shell: bash
+        run: |
+          node <<'NODE'
+          const base='https://huskyvet.huskysoft.com.co';
+          async function check(path,validate){
+            for(let attempt=0;attempt<3;attempt++){
+              try {const r=await fetch(base+path,{signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('HTTP '+r.status);await validate(r);console.log('OK '+path);return;}
+              catch(error){if(attempt===2)throw Error(path+': '+error.message);await new Promise(resolve=>setTimeout(resolve,10000));}
+            }
+          }
+          (async()=>{
+            await check('/api/health',async r=>{if((await r.json()).status!=='ok')throw Error('Service unavailable');});
+            await check('/auth',async r=>{if(!(await r.text()).includes('<app-root'))throw Error('Login page missing');});
+            const release=await fetch(base+'/release.json',{signal:AbortSignal.timeout(15000)});
+            if(release.ok && (await release.json()).version==='1.21')await check('/api/ready',async r=>{if((await r.json()).database!=='ready')throw Error('Database unavailable');});
+          })().catch(error=>{console.error(error.message);process.exitCode=1;});
+          NODE
