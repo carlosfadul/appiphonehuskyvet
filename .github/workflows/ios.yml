@@ -24,7 +24,8 @@ jobs:
       - run: npx cap sync ios
       - name: Compile Release for physical iPhone without signing
         run: bash scripts/ios-release.sh
-      - run: npm run ios:simulator
+      - name: Compile simulator and verify the rendered access screen
+        run: npm run ios:simulator
         timeout-minutes: 20
         env:
           HUSKYVET_USE_PREBUILT: '1'

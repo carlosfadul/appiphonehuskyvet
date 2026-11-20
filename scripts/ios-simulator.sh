@@ -40,8 +40,10 @@ if ! HUSKYVET_SIM_TIMEOUT=420 simctl bootstatus "$device" -b; then
   HUSKYVET_SIM_TIMEOUT=240 simctl bootstatus "$device" -b
 fi
 simctl install "$device" "$app"
+recognizer="${RUNNER_TEMP:-${TMPDIR:-/tmp}}/huskyvet-verify-ios-launch"
+xcrun swiftc scripts/verify-ios-launch.swift -o "$recognizer"
+"$recognizer" --self-test
 simctl launch "$device" co.huskysoft.mascotas
-sleep 5
-simctl io "$device" screenshot ios/App/output/iphone-launch.png
+python3 scripts/verify-ios-launch.py "$device" "$recognizer" ios/App/output
 ditto -c -k --sequesterRsrc --keepParent "$app" ios/App/output/Huskyvet-simulator.zip
-echo 'App para simulador y captura en ios/App/output. No es un IPA instalable en un iPhone físico.'
+echo 'Pantalla de acceso verificada visualmente. App, captura y logs en ios/App/output. No es un IPA instalable en un iPhone físico.'
