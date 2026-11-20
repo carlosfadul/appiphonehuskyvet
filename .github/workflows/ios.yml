@@ -25,7 +25,7 @@ jobs:
       - name: Compile Release for physical iPhone without signing
         run: bash scripts/ios-release.sh
       - run: npm run ios:simulator
-        timeout-minutes: 12
+        timeout-minutes: 20
         env:
           HUSKYVET_USE_PREBUILT: '1'
       - uses: actions/upload-artifact@v4

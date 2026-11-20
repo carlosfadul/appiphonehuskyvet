@@ -38,9 +38,11 @@ jobs:
           test -n "$HUSKYVET_ANDROID_STORE_PASSWORD"
           umask 077
           export HUSKYVET_ANDROID_KEYSTORE="$RUNNER_TEMP/huskyvet-commercial.p12"
+          export HUSKYVET_ANDROID_PILOT_KEYSTORE="$RUNNER_TEMP/huskyvet-pilot.keystore"
           printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$HUSKYVET_ANDROID_KEYSTORE"
-          mkdir -p "$HOME/.android"
-          printf '%s' "$ANDROID_PILOT_KEYSTORE_BASE64" | base64 --decode > "$HOME/.android/debug.keystore"
+          printf '%s' "$ANDROID_PILOT_KEYSTORE_BASE64" | base64 --decode > "$HUSKYVET_ANDROID_PILOT_KEYSTORE"
+          keytool -J-Duser.language=en -list -v -keystore "$HUSKYVET_ANDROID_PILOT_KEYSTORE" -storepass android > "$RUNNER_TEMP/pilot-certificate.txt"
+          grep -q 'FE:B9:E9:D2:71:E7:A5:9A:7D:32:FA:70:86:9E:10:AD:55:DC:C6:B7:AE:7D:DD:E9:5C:11:28:85:6B:DF:2D:2B' "$RUNNER_TEMP/pilot-certificate.txt"
           chmod +x android/gradlew
           cd android
           ./gradlew assembleRelease bundleRelease assemblePilot --console=plain --no-daemon
@@ -62,4 +64,4 @@ jobs:
       - name: Remove signing files
         if: always()
         run: |
-          rm -f "$RUNNER_TEMP/huskyvet-commercial.p12" "$HOME/.android/debug.keystore"
+          rm -f "$RUNNER_TEMP/huskyvet-commercial.p12" "$RUNNER_TEMP/huskyvet-pilot.keystore" "$RUNNER_TEMP/pilot-certificate.txt"

@@ -70,7 +70,7 @@ function runJava(name,args){const executable=path.join(process.env.JAVA_HOME||''
 function signature(file,expected,withoutSdk){
   const certificate=runJava('keytool',['-printcert','-jarfile',file]);
   const digest=certificate.match(/SHA256:\s*([0-9A-F:]+)/i)?.[1].replaceAll(':','').toUpperCase();
-  assert(digest===expected,'Firma incorrecta en '+path.basename(file));
+  assert(digest===expected,'Firma incorrecta en '+path.basename(file)+': '+(digest||'sin certificado legible')+'; esperada '+expected);
   const jar=runJava('jarsigner',['-verify',file]);assert(/jar verified\./i.test(jar),'La firma JAR no se verificó en '+path.basename(file));
   let apkVerifier='not-run';
   if(file.endsWith('.apk')&&!withoutSdk){

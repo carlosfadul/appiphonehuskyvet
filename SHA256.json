@@ -1,14 +1,14 @@
 {
   ".gitattributes": "75d6aa346eb9f2be32e41e027684fb68c38fbf0b031c9bf069d5cca429e8f018",
-  ".github/workflows/android-distribution.yml": "7bf5c97a675e56776e53d46af289f784876fb3093809f88b414e382a7580b398",
+  ".github/workflows/android-distribution.yml": "6bd7f716f2d5fc6a01990eeaf5643c302a198b34d4c0341f1623701c435d622e",
   ".github/workflows/availability.yml": "838666465b61401944e810ec5e032695771c21438d60da5f79f4595cbce701f1",
-  ".github/workflows/ios.yml": "25851c4c2c4ade667c94674d1dd86ac6df8aabd345044e603ffbf664b1bad47a",
+  ".github/workflows/ios.yml": "ad3c2658b5001fed017b06a7d2435eb4388812d4fbafb0b268397ca729e7ffba",
   ".github/workflows/testflight.yml": "885955c9e4775c71d5d33e7787caa3145c2187e5dfc63859297b4ec5393fb49f",
   ".gitignore": "3d1e10e69a12dd520727d27293e56046ec4aef7059786195b6698a4bd13ea3eb",
   "android/.gitignore": "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971",
   "android/.idea/gradle.xml": "d8e2aafade99289e1774a3baf03711fc40338659d9f22ebea29468781852dfa5",
   "android/app/.gitignore": "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4",
-  "android/app/build.gradle": "f6cdd77d53406b5a22eadbe40d420f6c1ceb9355e4ae8a1576b9fda8b0f251e5",
+  "android/app/build.gradle": "84cc1d0eb4b5c8f83c6e475406bc881f62e9e48ec97d60352f4a39014b86cb7c",
   "android/app/capacitor.build.gradle": "34f0c6c9adb967af86c5fcee1963595e02363d1d49d02fb504fc07af048e2e1b",
   "android/app/proguard-rules.pro": "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2",
   "android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java": "ff50b4c110a7434312f9af54171f9e8523b015836f707c9b387b76d4c38a97f8",
@@ -648,8 +648,8 @@
   "package.json": "3cecc310a2c766c1138f6faeee320c9d6f4abbc372a9051f121f721bcecb920f",
   "README.md": "167828baa7b7cfc64a20dbb879f6b9c11432bd4ca101b54380508f4423a0e332",
   "scripts/ios-release.sh": "baca8a1e2a7c0ab2ea1a94d942edbad32a7906fdb7f26f3a4d02750dcb8aec78",
-  "scripts/ios-simulator.sh": "30f9ae883c66e89c23e140b18c153484854b52653237cdab14928f1903ee65a8",
+  "scripts/ios-simulator.sh": "2a1543adad2ce4626b1c3c4a4828b43ef5b4aa812b884ddac3e78e64c3ddb54e",
   "scripts/ios-testflight.sh": "862e401bc63bcea798dd1d1aa5255df6e626125a0a367edf16fc2967fe7f942b",
-  "scripts/verify-android-artifacts.cjs": "6dcadcba279b068171d01ae7ef8455421af93b2329ae13601c513872dbeae0c7",
+  "scripts/verify-android-artifacts.cjs": "6d2054805a1a33627a545c82556a7110b5da5e650c82fed5b3d38f22549dfdfa",
   "TESTFLIGHT.md": "98838693aed511d07c8ee662e9bcd0a314d0c6563e2c1e597812935881e2c2f2"
 }
